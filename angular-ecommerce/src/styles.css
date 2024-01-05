@@ -532,7 +532,8 @@ input.au-input.au-input-xl {
   background: #fff;
 }
 .main-content.page-m {
-  padding: 10% 15% !important;
+  /* padding: 10% 15% !important; */
+  padding: 10% 30% 10% 5%;
 }
 
 /* 
@@ -1059,5 +1060,11 @@ footer ul li {
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
