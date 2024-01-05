@@ -4,4 +4,4 @@ Udemy Course: Build a Full Stack E-Commerce website with Angular and Java Spring
 
 # angular-ecommerce - UI
 
-![Logo](images/logo.png)
+![Logo](src/assets/images/logo.png)
