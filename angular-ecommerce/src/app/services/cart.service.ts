@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CartItem } from '../common/cart-item';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +8,29 @@ import { Subject } from 'rxjs';
 export class CartService {
   cartItems: CartItem[] = [];
 
-  totalPrice: Subject<number> = new Subject<number>();
-  totalQuantity: Subject<number> = new Subject<number>();
+  // Subject
+  // Does not keep a buffer of previous events
+  // Subscriber only receives new events after they are subscribed
+  // totalPrice: Subject<number> = new Subject<number>();
+  // totalQuantity: Subject<number> = new Subject<number>();
+
+  // ReplaySubject
+  // keep buffer of all previous events
+  // Once subscribed, subscriber receives a replay of all previous events
+  // send previous events to new subscribers
+  // totalPrice: Subject<number> = new ReplaySubject<number>();
+  // totalQuantity: Subject<number> = new ReplaySubject<number>();
+
+  // BehaviourSubject
+  // Has a buffer of the last events 
+  // Once subscribed, subscriber receives the latest event sent prior to subscribing
+  // useful for representing "values over time"
+  // Subject is the event stream of birthdays
+  // BehaviourSubject is the stream of a person's age
+  // Buffer of most recent value
+  totalPrice: Subject<number> = new BehaviorSubject<number>(0);
+  totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
+
 
   constructor() {}
 
