@@ -1,18 +1,7 @@
 package com.siti.ecommerce.entity;
 
-import java.math.BigDecimal;
-import java.util.Date;
-import java.util.Set;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.PrimaryKeyJoinColumn;
-import jakarta.persistence.Table;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -45,6 +34,7 @@ public class Address {
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
+	@JsonIgnore
 	private Order order;
 
 }

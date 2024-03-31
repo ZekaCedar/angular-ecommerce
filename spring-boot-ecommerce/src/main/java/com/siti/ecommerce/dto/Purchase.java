@@ -1,13 +1,12 @@
 package com.siti.ecommerce.dto;
 
-import java.util.Set;
-
 import com.siti.ecommerce.entity.Address;
 import com.siti.ecommerce.entity.Customer;
 import com.siti.ecommerce.entity.Order;
 import com.siti.ecommerce.entity.OrderItem;
-
 import lombok.Data;
+
+import java.util.Set;
 
 @Data
 public class Purchase {

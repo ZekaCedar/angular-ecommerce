@@ -1,9 +1,10 @@
 package com.siti.ecommerce.dao;
 
+import com.siti.ecommerce.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.siti.ecommerce.entity.Customer;
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-public interface CustomerRepository extends JpaRepository<Customer, Long>{
+    Customer findByEmail(String theEmail);
 
 }
